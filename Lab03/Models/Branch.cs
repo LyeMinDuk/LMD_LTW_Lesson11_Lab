@@ -1,4 +1,4 @@
-﻿namespace Lab01.Models
+﻿namespace Lab03.Models
 {
     public enum Branch
     {
