@@ -8,7 +8,7 @@ namespace Lab04.Data
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options) { }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Learner> Learners { get; set; }
-        public virtual DbSet<Learner> Enrollments { get; set; }
+        public virtual DbSet<Enrollment> Enrollments { get; set; }
         public virtual DbSet<Major> Majors { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
