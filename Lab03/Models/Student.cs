@@ -15,15 +15,15 @@ namespace Lab03.Models
         public string? Email { get; set; }
 
         [StringLength(100, MinimumLength =8)]
-        [Required]
+        [Required(ErrorMessage = "Phải nhập mật khẩu")]
         [Display(Name ="Mật khẩu")]
         public string? Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Phải nhập khoa")]
         [Display(Name ="Khoa")]
         public Branch? Branch { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Phải nhập giới tính")]
         [Display(Name ="Giới tính")]
         public Gender? Gender { get; set; }
 
@@ -31,14 +31,19 @@ namespace Lab03.Models
         public bool IsRegular { get; set; }
 
         [DataType(DataType.MultilineText)]
-        [Required]
+        [Required(ErrorMessage ="Phải nhập địa chỉ")]
         [Display(Name ="Địa chỉ")]
         public string? Address { get; set; }
 
         [Range(typeof(DateTime), "1/1/1963", "12/31/2005")]
         [DataType(DataType.Date)]
-        [Required]
+        [Required(ErrorMessage ="Phải nhập ngày sinh")]
         [Display(Name ="Ngày sinh")]
         public DateTime DateOfBirth { get; set; }
+
+        [Required(ErrorMessage ="Phải nhập điểm")]
+        [Display(Name ="Điểm")]
+        [Range(0.0, 10.0)]
+        public double Grade { get; set; }
     }
 }
