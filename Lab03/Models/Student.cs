@@ -6,7 +6,8 @@ namespace Lab03.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Tên bắt buộc phải nhập")]
+        [Display(Name ="Họ và tên")]
         public string? Name { get; set; }
 
         [Required(ErrorMessage ="Email bắt buộc phải nhập")]
@@ -15,23 +16,29 @@ namespace Lab03.Models
 
         [StringLength(100, MinimumLength =8)]
         [Required]
+        [Display(Name ="Mật khẩu")]
         public string? Password { get; set; }
 
         [Required]
+        [Display(Name ="Khoa")]
         public Branch? Branch { get; set; }
 
         [Required]
+        [Display(Name ="Giới tính")]
         public Gender? Gender { get; set; }
 
+        [Display(Name ="Chính quy")]
         public bool IsRegular { get; set; }
 
         [DataType(DataType.MultilineText)]
         [Required]
+        [Display(Name ="Địa chỉ")]
         public string? Address { get; set; }
 
         [Range(typeof(DateTime), "1/1/1963", "12/31/2005")]
         [DataType(DataType.Date)]
         [Required]
+        [Display(Name ="Ngày sinh")]
         public DateTime DateOfBirth { get; set; }
     }
 }
