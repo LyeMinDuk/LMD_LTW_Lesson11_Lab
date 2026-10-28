@@ -70,6 +70,13 @@
                 <textarea asp-for="Address" class="form-control" placeholder="Địa chỉ"></textarea>
             </div>
         </div>
+        <div style="margin-top:7px" class="form-group-row">
+            <label asp-for="Grade" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Grade" class="form-control" placeholder="Điểm" />
+            </div>
+            <span asp-validation-for="Grade" class="text-danger"></span>
+        </div>
         <div style="margin-top:10px" class="form-group-row">
             <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary">Create</button>
