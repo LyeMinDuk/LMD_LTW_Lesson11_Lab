@@ -6,7 +6,7 @@
         {
             Learners = new HashSet<Learner>();
         }
-        public int MajorlD { get; set; }
+        public int MajorID { get; set; }
         public string MajorName { get; set; }
         public virtual ICollection<Learner> Learners { get; set; }
 
