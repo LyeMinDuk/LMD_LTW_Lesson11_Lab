@@ -7,6 +7,7 @@ namespace Lab03.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage ="Tên bắt buộc phải nhập")]
+        [StringLength(100, MinimumLength = 4)]
         [Display(Name ="Họ và tên")]
         public string? Name { get; set; }
 
@@ -35,7 +36,7 @@ namespace Lab03.Models
         [Display(Name ="Địa chỉ")]
         public string? Address { get; set; }
 
-        [Range(typeof(DateTime), "1/1/1963", "12/31/2005")]
+        [Range(typeof(DateTime), "1/1/1963", "31/12/2005")]
         [DataType(DataType.Date)]
         [Required(ErrorMessage ="Phải nhập ngày sinh")]
         [Display(Name ="Ngày sinh")]
